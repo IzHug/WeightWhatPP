@@ -1,0 +1,11 @@
+# Run caches / serialized operator data
+runs/
+*.jls
+
+# Julia
+/docs/build/
+
+# Editors / OS
+.vscode/
+.DS_Store
+__pycache__/
