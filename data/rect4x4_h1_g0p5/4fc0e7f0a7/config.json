@@ -1,0 +1,41 @@
+{
+    "created_at": "2026-05-30T13:23:34.284",
+    "manifest_toml_sha256": "0bc8dd956e2d53dfc75dae382811cbae5159e33b4ab25664d941105fcfb60c81",
+    "git_dirty": true,
+    "experiment": "rect4x4_h1_g0p5",
+    "metric_extraction": "summary.json is derived by deserializing snapshot_ell.jls and truncated_ell.jls",
+    "rule": {
+        "label": "xyz5_d1em06",
+        "weight_period": 1,
+        "family": "xyz+coeff",
+        "tau_z": 0,
+        "c_gate": 1.0e-16,
+        "tau_xyz": 5,
+        "tau_xy": 0,
+        "rule_hash": "4fc0e7f0a7",
+        "coeff_min": 1.0e-6
+    },
+    "system": {
+        "dt": 0.01,
+        "P0_coeff": 1,
+        "h": 1,
+        "P0_term_hex": "c00",
+        "name": "rect4x4_h1_g0p5",
+        "topology_repr": "[(1, 5), (1, 2), (2, 6), (2, 3), (3, 7), (3, 4), (4, 8), (5, 9), (5, 6), (6, 10), (6, 7), (7, 11), (7, 8), (8, 12), (9, 13), (9, 10), (10, 14), (10, 11), (11, 15), (11, 12), (12, 16), (13, 14), (14, 15), (15, 16)]",
+        "P0_nqubits": 16,
+        "n_layers": 100,
+        "g": 0.5,
+        "n_qubits": 16,
+        "J": 1
+    },
+    "layer_file_contract": {
+        "kept": "K_ell is reconstructed as snapshot_ell - truncated_ell",
+        "truncated": "truncated_####.jls stores D_ell removed before layer ell+1",
+        "snapshot": "snapshot_####.jls stores A_ell before layer-ell truncation"
+    },
+    "git_commit": "unknown",
+    "kind": "simulation",
+    "julia_version": "1.12.6",
+    "schema_version": "pds-ppml-v3.0",
+    "project_toml_sha256": "0f476d319d0bc551a77a410c1947451ebb8d68d98f047a4d3a348358de256696"
+}

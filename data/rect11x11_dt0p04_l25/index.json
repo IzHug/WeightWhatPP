@@ -1,0 +1,338 @@
+{
+  "reference": null,
+  "rules": [
+    {
+      "coeff_min": 0.0001,
+      "complete": false,
+      "family": "coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "coeff_d1em04",
+      "n_complete": 14,
+      "n_layers": 25,
+      "rule_hash": "ebb5b7e646",
+      "tau_xy": 0,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "coeff_d1em05",
+      "n_complete": 10,
+      "n_layers": 25,
+      "rule_hash": "902eead889",
+      "tau_xy": 0,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy4_d1em04",
+      "n_complete": 15,
+      "n_layers": 25,
+      "rule_hash": "d06a0d3029",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy4_d1em05",
+      "n_complete": 11,
+      "n_layers": 25,
+      "rule_hash": "2261246b37",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy5_d1em04",
+      "n_complete": 14,
+      "n_layers": 25,
+      "rule_hash": "17d947f0a0",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy5_d1em05",
+      "n_complete": 10,
+      "n_layers": 25,
+      "rule_hash": "f2976667f9",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy6_d1em04",
+      "n_complete": 14,
+      "n_layers": 25,
+      "rule_hash": "f4821c84a3",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy6_d1em05",
+      "n_complete": 10,
+      "n_layers": 25,
+      "rule_hash": "4112f93b28",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy7_d1em04",
+      "n_complete": 14,
+      "n_layers": 25,
+      "rule_hash": "40c264a469",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy7_d1em05",
+      "n_complete": 10,
+      "n_layers": 25,
+      "rule_hash": "af6757c897",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy8_d1em04",
+      "n_complete": 14,
+      "n_layers": 25,
+      "rule_hash": "b922e332ee",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xy8_d1em05",
+      "n_complete": 10,
+      "n_layers": 25,
+      "rule_hash": "0de6ad4b23",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz4_d1em04",
+      "n_complete": 25,
+      "n_layers": 25,
+      "rule_hash": "0579ea4d0d",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz4_d1em05",
+      "n_complete": 25,
+      "n_layers": 25,
+      "rule_hash": "71c2fe2289",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz5_d1em04",
+      "n_complete": 25,
+      "n_layers": 25,
+      "rule_hash": "501c5c315e",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz5_d1em05",
+      "n_complete": 25,
+      "n_layers": 25,
+      "rule_hash": "451bd5b8c3",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz6_d1em04",
+      "n_complete": 25,
+      "n_layers": 25,
+      "rule_hash": "f71fb1ef82",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz6_d1em05",
+      "n_complete": 25,
+      "n_layers": 25,
+      "rule_hash": "f115d8fc83",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz7_d1em04",
+      "n_complete": 25,
+      "n_layers": 25,
+      "rule_hash": "35fd0a7e1f",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz7_d1em05",
+      "n_complete": 17,
+      "n_layers": 25,
+      "rule_hash": "7a764f9809",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 0.0001,
+      "complete": false,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz8_d1em04",
+      "n_complete": 18,
+      "n_layers": 25,
+      "rule_hash": "703c1ff051",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": false,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json"
+      ],
+      "label": "xyz8_d1em05",
+      "n_complete": 12,
+      "n_layers": 25,
+      "rule_hash": "b0a1d3c7d0",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    }
+  ],
+  "source_experiment": "rect11x11_dt0p04_l25",
+  "source_system_dir": "rect11x11_dt0p04_l25",
+  "system": "rect11x11_dt0p04_l25"
+}

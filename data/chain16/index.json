@@ -1,0 +1,1054 @@
+{
+  "reference": {
+    "files": [
+      "config.json",
+      "yao_overlap.json"
+    ],
+    "path": "reference"
+  },
+  "rules": [
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "coeff_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "902eead889",
+      "tau_xy": 0,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "coeff_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "7f7f8ca4e3",
+      "tau_xy": 0,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "coeff_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "dc458fd5fc",
+      "tau_xy": 0,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "coeff_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "268971f835",
+      "tau_xy": 0,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "coeff_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "c9658dc9ec",
+      "tau_xy": 0,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xy",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy4_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "38c74cc9c6",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy4_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "2261246b37",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy4_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "34da84079e",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy4_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "3304ff802a",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy4_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "2e827016a8",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy4_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "c1127a977f",
+      "tau_xy": 4,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xy",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy5_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "2004476cae",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy5_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "f2976667f9",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy5_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "8d41b94b80",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy5_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "3dccd0ae14",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy5_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "dcdfd18695",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy5_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "d4bf35f6a1",
+      "tau_xy": 5,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xy",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy6_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "70fac08421",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy6_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "4112f93b28",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy6_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "2a0b315a57",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy6_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "b7d20a378a",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy6_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "4c4c43b00a",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy6_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "4b87f76897",
+      "tau_xy": 6,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xy",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy7_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "9d3cf3d2bd",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy7_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "af6757c897",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy7_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "719c312286",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy7_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "4259cc7773",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy7_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "d670521f4b",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy7_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "affc2777f8",
+      "tau_xy": 7,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xy",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy8_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "85f3a6cfec",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy8_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "0de6ad4b23",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy8_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "6ca9e9ecf7",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy8_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "6a9efc7ab8",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy8_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "e71651344a",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xy+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xy8_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "add3f637cc",
+      "tau_xy": 8,
+      "tau_xyz": 0
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xyz",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz4_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "5cdc1d8f79",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz4_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "71c2fe2289",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz4_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "699b1de29b",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz4_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "e9bd89e494",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz4_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "1657f531af",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz4_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "2e52b16d0c",
+      "tau_xy": 0,
+      "tau_xyz": 4
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xyz",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz5_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "a5f8f57a6a",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz5_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "451bd5b8c3",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz5_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "4fc0e7f0a7",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz5_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "d9edd07507",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz5_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "68f0ba207e",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz5_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "c03f0413bc",
+      "tau_xy": 0,
+      "tau_xyz": 5
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xyz",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz6_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "913a48fe7e",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz6_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "f115d8fc83",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz6_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "fd476ea734",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz6_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "f034a1a6eb",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz6_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "eaec933d28",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz6_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "fe0fabd002",
+      "tau_xy": 0,
+      "tau_xyz": 6
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xyz",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz7_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "586bdfbefb",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz7_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "7a764f9809",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz7_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "3804378557",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz7_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "f54bf14be9",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz7_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "ed9b93607a",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz7_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "fbc9b4f1eb",
+      "tau_xy": 0,
+      "tau_xyz": 7
+    },
+    {
+      "coeff_min": 0,
+      "complete": true,
+      "family": "xyz",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz8_d0",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "55392e2fa5",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    },
+    {
+      "coeff_min": 1e-05,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz8_d1em05",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "b0a1d3c7d0",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    },
+    {
+      "coeff_min": 1e-06,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz8_d1em06",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "2bc3fc1ae5",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    },
+    {
+      "coeff_min": 1e-07,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz8_d1em07",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "00e4fb7ccf",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    },
+    {
+      "coeff_min": 1e-08,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz8_d1em08",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "e2174875fa",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    },
+    {
+      "coeff_min": 1e-09,
+      "complete": true,
+      "family": "xyz+coeff",
+      "files": [
+        "config.json",
+        "summary.json",
+        "cdf_layers.json"
+      ],
+      "label": "xyz8_d1em09",
+      "n_complete": 100,
+      "n_layers": 100,
+      "rule_hash": "051065ea5b",
+      "tau_xy": 0,
+      "tau_xyz": 8
+    }
+  ],
+  "source_experiment": "chain16",
+  "source_system_dir": "chain16",
+  "system": "chain16"
+}
