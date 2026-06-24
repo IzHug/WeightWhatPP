@@ -23,18 +23,3 @@ statevector simulation.
 julia --project=. -e 'using Pkg; Pkg.instantiate()'
 julia --project=. -e 'include("src/pipeline.jl")'
 ```
-
-## Conventions
-
-The study Hamiltonian carries negative signs,
-
-```
-H = -J Σ⟨i,j⟩ Z_i Z_j  -  h Σ_i X_i  -  g Σ_i Z_i ,
-```
-
-so the Schrödinger Trotter gate is `exp(-i H_term Δt) = exp(+i coupling Δt P)` and, with
-`PauliRotation(θ) = exp(-iθ/2 P)`, the rotation angles are `θ = -2·{J,h,g}·Δt`.
-`propagate!(...; heisenberg=true)` then returns the genuine Heisenberg-evolved observable
-`O(t) = (U^L)† Z_c U^L`. Truncation is applied per Trotter layer (every layer by default,
-or every `weight_period`-th layer); the raw operator after each layer is the cost/observable
-of record, the kept operator is propagated forward.
