@@ -1,80 +1,142 @@
 # WeightWhatPP
 
-Weight- and coefficient-based truncation rules for Pauli-operator propagation in
-Trotterized quantum simulation — the code release of the PDS_PPML study.
+Which Pauli strings are worth keeping?
 
-We propagate the tilted transverse-field Ising model in the Heisenberg picture with
-[PauliPropagation.jl](https://github.com/MSRudolph/PauliPropagation.jl), apply
-layer-level truncation rules (coefficient threshold and weight caps), and cross-validate
-the resulting `⟨Z_c(t)⟩` trajectory against an exact [Yao.jl](https://github.com/QuantumBFS/Yao.jl)
-statevector simulation.
+This repository contains the code and extracted data used to benchmark
+truncation rules for Pauli operator propagation under Ising dynamics.  The
+question is practical: if a Pauli expansion is growing too fast, which
+truncation rule gives the best accuracy for the memory it spends?
 
-## Layout
+The simulations use
+[PauliPropagation.jl](https://github.com/MSRudolph/PauliPropagation.jl) in the
+Heisenberg picture, with exact state-vector references from
+[Yao.jl](https://github.com/QuantumBFS/Yao.jl) when the system is small enough.
 
-- `src/` — the propagation pipeline (Julia). `pipeline.jl` includes the modules in order:
-  `systems`, `truncation`, `io`, `trotter`, `metrics`, `propagation`, `reference`,
-  `experiments`, `distributions`.
-- `data/` — the lightweight JSON data extracted from the PauliSum snapshots,
-  organized by system and truncation rule.
-- `runs/` — local cache for raw `.jls` snapshots and extracted JSON files.  This
-  folder is ignored by git.
-- `scripts/` — small entry points for running propagation, extraction, and CDF
-  export for one work item.
-- `tools/` — utility scripts, including the builder for the public `data/` tree.
-- `Project.toml`, `Manifest.toml` — the pinned environment (PauliPropagation 0.7.2,
-  same git-tree as the production runs).
+The three truncation families are:
 
-## Usage
+- coefficient-only truncation;
+- coefficient truncation plus a total Pauli-weight cap;
+- coefficient truncation plus an `XY`-weight cap.
+
+The benchmark systems are periodic rings and open rectangular lattices for the
+tilted transverse-field Ising model.
+
+## What Is Here
+
+```text
+.
+├── src/          Julia code for systems, circuits, propagation, truncation,
+│                references, metrics, and extraction
+├── scripts/      Small launchers for local runs or Slurm arrays
+├── data/         Public JSON data extracted from the raw snapshots
+├── tools/        Utilities for rebuilding the public data folder
+├── runs/         Local raw snapshot cache; ignored by git
+├── Project.toml  Julia environment
+└── Manifest.toml Pinned dependency versions
+```
+
+Think of `runs/` as the heavy machinery and `data/` as the clean export.  The
+raw `.jls` PauliSum snapshots can become huge, so they are not committed.  The
+repository keeps the extracted JSON files needed for analysis and plotting.
+
+## Quick Start
 
 ```bash
+git clone https://github.com/IzHug/WeightWhatPP.git
+cd WeightWhatPP
 julia --project=. -e 'using Pkg; Pkg.instantiate()'
+```
+
+Load the pipeline:
+
+```bash
 julia --project=. -e 'include("src/pipeline.jl")'
 ```
 
-## Data Pipeline
+Run one work item:
 
-The full pipeline has two storage levels.
-
-The raw level is `runs/`.  It contains serialized PauliSum snapshots:
-
-```text
-runs/<system>/<system>/<rule_hash>/snapshot_####.jls
-runs/<system>/<system>/<rule_hash>/truncated_####.jls
+```bash
+EXPERIMENT=rect4x4 ITEM=0 TASK=propagate julia --project=. scripts/run_one.jl
 ```
 
-These files are useful for re-extraction, but they can be huge, so they are not
-committed.  The public level is `data/`.  It contains only the extracted JSON
-files:
+The same launcher is used for propagation, extraction, and distribution data:
+
+```bash
+# Generate raw PauliSum snapshots.
+EXPERIMENT=rect4x4 ITEM=0 TASK=propagate julia --project=. scripts/run_one.jl
+
+# Extract scalar diagnostics from the snapshots.
+EXPERIMENT=rect4x4 ITEM=0 TASK=extract julia --project=. scripts/run_one.jl
+
+# Extract coefficient and weight distributions for selected layers.
+EXPERIMENT=rect4x4 ITEM=0 TASK=cdf TARGET_ELLS=30,50,80,100 julia --project=. scripts/run_one.jl
+```
+
+Use `TASK=both` to propagate and extract in one pass.
+
+## Experiments
+
+The main experiment names are:
+
+```text
+chain16
+rect4x4
+rect4x4_h1_g0p5
+rect5x5
+rect5x5_h5p158
+rect4x4_dt0p04_l25
+rect5x5_dt0p04_l25
+rect11x11_dt0p04_l25
+```
+
+`ITEM` is zero-based for local runs.  On a Slurm array, the script reads
+`SLURM_ARRAY_TASK_ID` automatically.
+
+## Data
+
+Each system in `data/` has an `index.json` and one folder per truncation rule.
+Rule folders are named by stable hashes.
 
 ```text
 data/<system>/<rule_hash>/config.json
 data/<system>/<rule_hash>/summary.json
 data/<system>/<rule_hash>/cdf_layers.json
+data/<system>/reference/yao_overlap.json
 ```
 
-Run one propagation task:
+- `config.json` describes the physical system and truncation rule.
+- `summary.json` stores scalar diagnostics, including sizes and scores.
+- `cdf_layers.json` stores coefficient and weight distributions, when present.
+- `reference/yao_overlap.json` stores the exact Yao reference, when available.
+- `data/manifest.json` lists the systems in the public data release.
 
-```bash
-ITEM=0 EXPERIMENT=rect4x4 TASK=propagate julia --project=. scripts/run_one.jl
-```
-
-Extract metrics from the snapshots:
-
-```bash
-ITEM=0 EXPERIMENT=rect4x4 TASK=extract julia --project=. scripts/run_one.jl
-```
-
-Optionally extract coefficient and weight distributions:
-
-```bash
-ITEM=0 EXPERIMENT=rect4x4 TASK=cdf TARGET_ELLS=30,50,80,100 julia --project=. scripts/run_one.jl
-```
-
-Rebuild the committed `data/` folder from `runs/`:
+To rebuild the public data folder from a local `runs/` cache:
 
 ```bash
 tools/build_public_data.py --clean
 ```
 
-For the production study, these same steps were run as arrays on SCITAS.  The
-raw snapshots stay external; the code and extracted JSON data are kept here.
+## Storage Model
+
+The pipeline has two layers:
+
+```text
+runs/    raw snapshots, large, local only
+data/    extracted JSON, small enough to publish
+```
+
+This is deliberate.  The snapshots are useful if you want to re-extract a new
+diagnostic, but the JSON files are the stable public artifact used by the
+report.
+
+## Compute
+
+The production runs were executed on the Jed cluster of EPFL SCITAS.  Standard
+Jed CPU nodes have 72 cores, using two 36-core Intel Xeon Platinum 8360Y
+processors.
+
+## Status
+
+This is a research code release, not a polished Julia package.  The pinned
+environment is included so the benchmark pipeline can be reproduced as closely
+as possible.
