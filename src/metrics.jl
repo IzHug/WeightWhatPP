@@ -176,20 +176,230 @@ function summary_has_metric_values(obj, n_layers::Int, through_layer::Int)
     return true
 end
 
+function _extract_log_every_parts()
+    return max(1, _env_int("PDS_PPML_EXTRACT_LOG_EVERY_PARTS", 25))
+end
+
+function write_extraction_progress!(root::AbstractString, experiment::AbstractString,
+                                    sys::StudySystem, rule::TruncationRule;
+                                    layer::Int, artifact::AbstractString,
+                                    part::Int, parts::Int, rows::Int)
+    path = extraction_active_path(root, experiment, sys, rule)
+    obj = if isfile(path)
+        try
+            Dict{String,Any}(JSON3.read(read(path, String), Dict))
+        catch
+            extraction_active_metadata(experiment, sys, rule)
+        end
+    else
+        extraction_active_metadata(experiment, sys, rule)
+    end
+    obj["progress_layer"] = layer
+    obj["progress_artifact"] = String(artifact)
+    obj["progress_part"] = part
+    obj["progress_parts"] = parts
+    obj["progress_rows"] = rows
+    obj["progress_label"] = parts > 0 ? "$(artifact) $(part)/$(parts)" : String(artifact)
+    obj["progress_updated_at"] = string(now())
+    _atomic_json_write(path, obj)
+    return nothing
+end
+
+function _extract_threads()
+    requested = max(1, _env_int("PDS_PPML_EXTRACT_THREADS", Threads.nthreads()))
+    return min(requested, Threads.nthreads())
+end
+
+function _assert_artifact_type(obj, expected::AbstractString, path::AbstractString)
+    if expected == "dict"
+        obj isa AbstractDict || error("expected Dict artifact at $path")
+    elseif expected == "vector"
+        obj isa AbstractVector || error("expected Vector artifact at $path")
+    else
+        error("unknown expected artifact type '$expected'")
+    end
+    return obj
+end
+
+function _layer_artifact_part_paths(path::AbstractString; expected::AbstractString)
+    if isfile(path)
+        return [(String(path), 1, 1)]
+    end
+    isdir(path) || error("layer artifact not found: $path")
+
+    manifest = joinpath(path, "manifest.json")
+    isfile(manifest) || error("chunked layer artifact is missing manifest: $path")
+    obj = JSON3.read(read(manifest, String), Dict)
+    string(get(obj, "format", "")) == CHUNKED_JLS_FORMAT ||
+        error("unknown chunked layer artifact format at $path")
+    container_type = string(get(obj, "container_type", ""))
+    container_type == expected ||
+        error("expected $expected artifact at $path, got container_type='$container_type'")
+
+    parts = [string(part) for part in get(obj, "parts", Any[])]
+    all(isfile(joinpath(path, part)) for part in parts) ||
+        error("chunked layer artifact has missing parts: $path")
+    n_parts = length(parts)
+    return [(joinpath(path, part), i, n_parts) for (i, part) in enumerate(parts)]
+end
+
+function _read_metric_chunk(path::AbstractString; expected::AbstractString)
+    return _assert_artifact_type(deserialize(path), expected, path)
+end
+
+function _mapreduce_metric_chunks(root::AbstractString, experiment::AbstractString,
+                                  sys::StudySystem, rule::TruncationRule,
+                                  ell::Int, path::AbstractString;
+                                  expected::AbstractString,
+                                  artifact::AbstractString,
+                                  init::Function,
+                                  combine::Function,
+                                  process_chunk::Function)
+    parts = _layer_artifact_part_paths(path; expected)
+    n_parts = length(parts)
+    log_every = _extract_log_every_parts()
+    n_workers = min(_extract_threads(), n_parts)
+
+    if n_workers <= 1
+        acc = init()
+        rows = 0
+        for (part_path, part_i, total_parts) in parts
+            chunk = _read_metric_chunk(part_path; expected)
+            acc = combine(acc, process_chunk(chunk))
+            rows += length(chunk)
+            if part_i == 1 || part_i == total_parts || part_i % log_every == 0
+                write_extraction_progress!(root, experiment, sys, rule;
+                                           layer = ell, artifact = artifact,
+                                           part = part_i, parts = total_parts,
+                                           rows = rows)
+                @info "extracted $(artifact) chunk" experiment system=sys.name rule=readable_rule(rule) layer=ell part=part_i parts=total_parts rows=rows threads=1
+            end
+            part_i % 8 == 0 && GC.gc()
+        end
+        return acc
+    end
+
+    results = Vector{Any}(undef, n_parts)
+    next_i = Threads.Atomic{Int}(0)
+    done_parts = Threads.Atomic{Int}(0)
+    done_rows = Threads.Atomic{Int}(0)
+    progress_lock = ReentrantLock()
+
+    tasks = map(1:n_workers) do _
+        Threads.@spawn begin
+            while true
+                i = Threads.atomic_add!(next_i, 1) + 1
+                i > n_parts && break
+                part_path, _, total_parts = parts[i]
+                chunk = _read_metric_chunk(part_path; expected)
+                results[i] = process_chunk(chunk)
+                rows = Threads.atomic_add!(done_rows, length(chunk)) + length(chunk)
+                done = Threads.atomic_add!(done_parts, 1) + 1
+                if done == 1 || done == total_parts || done % log_every == 0
+                    lock(progress_lock)
+                    try
+                        write_extraction_progress!(root, experiment, sys, rule;
+                                                   layer = ell, artifact = artifact,
+                                                   part = done, parts = total_parts,
+                                                   rows = rows)
+                        @info "extracted $(artifact) chunks" experiment system=sys.name rule=readable_rule(rule) layer=ell parts_done=done parts=total_parts rows=rows threads=n_workers
+                    finally
+                        unlock(progress_lock)
+                    end
+                end
+                done % 8 == 0 && GC.gc()
+            end
+        end
+    end
+    fetch.(tasks)
+
+    acc = init()
+    for result in results
+        acc = combine(acc, result)
+    end
+    return acc
+end
+
+function _raw_metrics_chunk(chunk, sys::StudySystem)
+    raw_overlap = 0.0
+    raw_autocorr = 0.0
+    weight_moment = 0.0
+    for (term, coeff) in chunk
+        c = Float64(coeff)
+        contributes_to_zero(term, sys.n_qubits) && (raw_overlap += c)
+        term == sys.P0.term && (raw_autocorr += c)
+        weight_moment += Float64(abs2(coeff)) * count_weights(term, sys.n_qubits).xyz
+    end
+    return (length(chunk), raw_overlap, raw_autocorr, weight_moment)
+end
+
+_combine_raw_metrics(a, b) = (a[1] + b[1], a[2] + b[2],
+                              a[3] + b[3], a[4] + b[4])
+
+function _merge_drop_stats(a, b)
+    out = copy(a)
+    for (key, value) in b
+        out[key] = get(out, key, 0) + value
+    end
+    return out
+end
+
+function _dropped_metrics_chunk(chunk, sys::StudySystem, rule::TruncationRule,
+                                ell::Int)
+    stats = zero_drop_stats()
+    dropped_overlap = 0.0
+    for pair in chunk
+        term = pair.first
+        coeff = pair.second
+        contributes_to_zero(term, sys.n_qubits) && (dropped_overlap += Float64(coeff))
+        hits = rule_hits(term, coeff, rule, sys.n_qubits, ell)
+        hits.drop || continue
+        update_drop_stats!(stats, hits)
+    end
+    return (length(chunk), dropped_overlap, stats)
+end
+
+function _combine_dropped_metrics(a, b)
+    return (a[1] + b[1], a[2] + b[2], _merge_drop_stats(a[3], b[3]))
+end
+
+function raw_metrics_from_disk(root::AbstractString, experiment::AbstractString,
+                               sys::StudySystem, rule::TruncationRule,
+                               ell::Int)
+    snapshot_file = snapshot_path(root, experiment, sys, rule, ell)
+    return _mapreduce_metric_chunks(root, experiment, sys, rule, ell, snapshot_file;
+        expected = "dict",
+        artifact = "raw",
+        init = () -> (0, 0.0, 0.0, 0.0),
+        combine = _combine_raw_metrics,
+        process_chunk = chunk -> _raw_metrics_chunk(chunk, sys),
+    )
+end
+
+function dropped_metrics_from_disk(root::AbstractString, experiment::AbstractString,
+                                   sys::StudySystem, rule::TruncationRule,
+                                   ell::Int)
+    truncated_file = truncated_path(root, experiment, sys, rule, ell)
+    return _mapreduce_metric_chunks(root, experiment, sys, rule, ell, truncated_file;
+        expected = "vector",
+        artifact = "dropped",
+        init = () -> (0, 0.0, zero_drop_stats()),
+        combine = _combine_dropped_metrics,
+        process_chunk = chunk -> _dropped_metrics_chunk(chunk, sys, rule, ell),
+    )
+end
+
 function record_layer_from_disk!(root::AbstractString, experiment::AbstractString,
                                  sys::StudySystem, rule::TruncationRule, metrics,
                                  ell::Int, run_meta; complete::Bool = false)
-    snapshot_terms = read_layer_artifact(snapshot_path(root, experiment, sys, rule, ell))
-    dropped = read_layer_artifact(truncated_path(root, experiment, sys, rule, ell))
-    stats = drop_stats_from_dropped(dropped, rule, sys.n_qubits, ell)
-    raw_overlap = overlap_zero_terms(snapshot_terms, sys.n_qubits)
-    dropped_overlap = overlap_zero_pairs(dropped, sys.n_qubits)
-    # Only the raw autocorrelation is meaningful — kept/dropped is a binary
-    # split of a single coefficient and adds no information beyond the rule.
-    raw_autocorr = autocorrelation_terms(snapshot_terms, sys.P0.term)
-    weight_moment = weight_second_moment_terms(snapshot_terms, sys.n_qubits)
-    raw_n = length(snapshot_terms)
-    dropped_n = length(dropped)
+    @info "extracting layer from disk" experiment system=sys.name rule=readable_rule(rule) layer=ell
+    write_extraction_progress!(root, experiment, sys, rule;
+                               layer = ell, artifact = "starting",
+                               part = 0, parts = 0, rows = 0)
+    raw_n, raw_overlap, raw_autocorr, weight_moment =
+        raw_metrics_from_disk(root, experiment, sys, rule, ell)
+    dropped_n, dropped_overlap, stats =
+        dropped_metrics_from_disk(root, experiment, sys, rule, ell)
 
     record_layer!(metrics, ell;
         raw_n = raw_n,

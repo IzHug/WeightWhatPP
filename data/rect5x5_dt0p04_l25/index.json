@@ -39,13 +39,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": false,
       "family": "coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "coeff_d1em07",
-      "n_complete": null,
+      "n_complete": 8,
       "n_layers": 25,
       "rule_hash": "dc458fd5fc",
       "tau_xy": 0,
@@ -53,13 +54,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "coeff_d1em08",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "268971f835",
       "tau_xy": 0,
@@ -67,13 +69,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "coeff_d1em09",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "c9658dc9ec",
       "tau_xy": 0,
@@ -81,13 +84,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": false,
       "family": "xy",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy4_d0",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "38c74cc9c6",
       "tau_xy": 4,
@@ -125,13 +129,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy4_d1em07",
-      "n_complete": null,
+      "n_complete": 10,
       "n_layers": 25,
       "rule_hash": "3304ff802a",
       "tau_xy": 4,
@@ -139,13 +144,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy4_d1em08",
-      "n_complete": null,
+      "n_complete": 9,
       "n_layers": 25,
       "rule_hash": "2e827016a8",
       "tau_xy": 4,
@@ -153,13 +159,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy4_d1em09",
-      "n_complete": null,
+      "n_complete": 8,
       "n_layers": 25,
       "rule_hash": "c1127a977f",
       "tau_xy": 4,
@@ -167,13 +174,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": false,
       "family": "xy",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy5_d0",
-      "n_complete": null,
+      "n_complete": 6,
       "n_layers": 25,
       "rule_hash": "2004476cae",
       "tau_xy": 5,
@@ -211,13 +219,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy5_d1em07",
-      "n_complete": null,
+      "n_complete": 9,
       "n_layers": 25,
       "rule_hash": "3dccd0ae14",
       "tau_xy": 5,
@@ -225,13 +234,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy5_d1em08",
-      "n_complete": null,
+      "n_complete": 8,
       "n_layers": 25,
       "rule_hash": "dcdfd18695",
       "tau_xy": 5,
@@ -239,13 +249,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy5_d1em09",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "d4bf35f6a1",
       "tau_xy": 5,
@@ -253,13 +264,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": false,
       "family": "xy",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy6_d0",
-      "n_complete": null,
+      "n_complete": 5,
       "n_layers": 25,
       "rule_hash": "70fac08421",
       "tau_xy": 6,
@@ -297,13 +309,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy6_d1em07",
-      "n_complete": null,
+      "n_complete": 9,
       "n_layers": 25,
       "rule_hash": "b7d20a378a",
       "tau_xy": 6,
@@ -311,13 +324,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy6_d1em08",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "4c4c43b00a",
       "tau_xy": 6,
@@ -325,13 +339,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy6_d1em09",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "4b87f76897",
       "tau_xy": 6,
@@ -339,13 +354,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": false,
       "family": "xy",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy7_d0",
-      "n_complete": null,
+      "n_complete": 5,
       "n_layers": 25,
       "rule_hash": "9d3cf3d2bd",
       "tau_xy": 7,
@@ -383,13 +399,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy7_d1em07",
-      "n_complete": null,
+      "n_complete": 8,
       "n_layers": 25,
       "rule_hash": "4259cc7773",
       "tau_xy": 7,
@@ -397,13 +414,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy7_d1em08",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "d670521f4b",
       "tau_xy": 7,
@@ -411,13 +429,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy7_d1em09",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "affc2777f8",
       "tau_xy": 7,
@@ -425,13 +444,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": false,
       "family": "xy",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy8_d0",
-      "n_complete": null,
+      "n_complete": 5,
       "n_layers": 25,
       "rule_hash": "85f3a6cfec",
       "tau_xy": 8,
@@ -469,13 +489,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy8_d1em07",
-      "n_complete": null,
+      "n_complete": 8,
       "n_layers": 25,
       "rule_hash": "6a9efc7ab8",
       "tau_xy": 8,
@@ -483,13 +504,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy8_d1em08",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "e71651344a",
       "tau_xy": 8,
@@ -497,13 +519,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "xy+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xy8_d1em09",
-      "n_complete": null,
+      "n_complete": 7,
       "n_layers": 25,
       "rule_hash": "add3f637cc",
       "tau_xy": 8,
@@ -511,13 +534,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": true,
       "family": "xyz",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz4_d0",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "5cdc1d8f79",
       "tau_xy": 0,
@@ -555,13 +579,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz4_d1em07",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "e9bd89e494",
       "tau_xy": 0,
@@ -569,13 +594,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz4_d1em08",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "1657f531af",
       "tau_xy": 0,
@@ -583,13 +609,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz4_d1em09",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "2e52b16d0c",
       "tau_xy": 0,
@@ -597,13 +624,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": true,
       "family": "xyz",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz5_d0",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "a5f8f57a6a",
       "tau_xy": 0,
@@ -641,13 +669,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz5_d1em07",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "d9edd07507",
       "tau_xy": 0,
@@ -655,13 +684,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz5_d1em08",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "68f0ba207e",
       "tau_xy": 0,
@@ -669,13 +699,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz5_d1em09",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "c03f0413bc",
       "tau_xy": 0,
@@ -683,13 +714,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": true,
       "family": "xyz",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz6_d0",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "913a48fe7e",
       "tau_xy": 0,
@@ -727,13 +759,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz6_d1em07",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "f034a1a6eb",
       "tau_xy": 0,
@@ -741,13 +774,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz6_d1em08",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "eaec933d28",
       "tau_xy": 0,
@@ -755,13 +789,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz6_d1em09",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "fe0fabd002",
       "tau_xy": 0,
@@ -769,13 +804,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": false,
       "family": "xyz",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz7_d0",
-      "n_complete": null,
+      "n_complete": 16,
       "n_layers": 25,
       "rule_hash": "586bdfbefb",
       "tau_xy": 0,
@@ -813,13 +849,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz7_d1em07",
-      "n_complete": null,
+      "n_complete": 25,
       "n_layers": 25,
       "rule_hash": "f54bf14be9",
       "tau_xy": 0,
@@ -827,13 +864,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz7_d1em08",
-      "n_complete": null,
+      "n_complete": 22,
       "n_layers": 25,
       "rule_hash": "ed9b93607a",
       "tau_xy": 0,
@@ -841,13 +879,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz7_d1em09",
-      "n_complete": null,
+      "n_complete": 19,
       "n_layers": 25,
       "rule_hash": "fbc9b4f1eb",
       "tau_xy": 0,
@@ -855,13 +894,14 @@
     },
     {
       "coeff_min": 0,
-      "complete": null,
+      "complete": false,
       "family": "xyz",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz8_d0",
-      "n_complete": null,
+      "n_complete": 9,
       "n_layers": 25,
       "rule_hash": "55392e2fa5",
       "tau_xy": 0,
@@ -899,13 +939,14 @@
     },
     {
       "coeff_min": 1e-07,
-      "complete": null,
+      "complete": false,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz8_d1em07",
-      "n_complete": null,
+      "n_complete": 15,
       "n_layers": 25,
       "rule_hash": "00e4fb7ccf",
       "tau_xy": 0,
@@ -913,13 +954,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": null,
+      "complete": false,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz8_d1em08",
-      "n_complete": null,
+      "n_complete": 13,
       "n_layers": 25,
       "rule_hash": "e2174875fa",
       "tau_xy": 0,
@@ -927,13 +969,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": null,
+      "complete": false,
       "family": "xyz+coeff",
       "files": [
-        "config.json"
+        "config.json",
+        "summary.json"
       ],
       "label": "xyz8_d1em09",
-      "n_complete": null,
+      "n_complete": 11,
       "n_layers": 25,
       "rule_hash": "051065ea5b",
       "tau_xy": 0,

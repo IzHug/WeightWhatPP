@@ -16,7 +16,7 @@
         "summary.json"
       ],
       "label": "coeff_d1em05",
-      "n_complete": 67,
+      "n_complete": 77,
       "n_layers": 100,
       "rule_hash": "902eead889",
       "tau_xy": 0,
@@ -31,7 +31,7 @@
         "summary.json"
       ],
       "label": "coeff_d1em06",
-      "n_complete": 50,
+      "n_complete": 55,
       "n_layers": 100,
       "rule_hash": "7f7f8ca4e3",
       "tau_xy": 0,
@@ -46,7 +46,7 @@
         "summary.json"
       ],
       "label": "coeff_d1em07",
-      "n_complete": 41,
+      "n_complete": 45,
       "n_layers": 100,
       "rule_hash": "dc458fd5fc",
       "tau_xy": 0,
@@ -61,7 +61,7 @@
         "summary.json"
       ],
       "label": "coeff_d1em08",
-      "n_complete": 35,
+      "n_complete": 38,
       "n_layers": 100,
       "rule_hash": "268971f835",
       "tau_xy": 0,
@@ -76,7 +76,7 @@
         "summary.json"
       ],
       "label": "coeff_d1em09",
-      "n_complete": 31,
+      "n_complete": 34,
       "n_layers": 100,
       "rule_hash": "c9658dc9ec",
       "tau_xy": 0,
@@ -91,7 +91,7 @@
         "summary.json"
       ],
       "label": "xy4_d0",
-      "n_complete": 30,
+      "n_complete": 37,
       "n_layers": 100,
       "rule_hash": "38c74cc9c6",
       "tau_xy": 4,
@@ -106,7 +106,7 @@
         "summary.json"
       ],
       "label": "xy4_d1em05",
-      "n_complete": 83,
+      "n_complete": 98,
       "n_layers": 100,
       "rule_hash": "2261246b37",
       "tau_xy": 4,
@@ -121,7 +121,7 @@
         "summary.json"
       ],
       "label": "xy4_d1em06",
-      "n_complete": 63,
+      "n_complete": 71,
       "n_layers": 100,
       "rule_hash": "34da84079e",
       "tau_xy": 4,
@@ -136,7 +136,7 @@
         "summary.json"
       ],
       "label": "xy4_d1em07",
-      "n_complete": 53,
+      "n_complete": 59,
       "n_layers": 100,
       "rule_hash": "3304ff802a",
       "tau_xy": 4,
@@ -151,7 +151,7 @@
         "summary.json"
       ],
       "label": "xy4_d1em08",
-      "n_complete": 46,
+      "n_complete": 51,
       "n_layers": 100,
       "rule_hash": "2e827016a8",
       "tau_xy": 4,
@@ -166,7 +166,7 @@
         "summary.json"
       ],
       "label": "xy4_d1em09",
-      "n_complete": 42,
+      "n_complete": 47,
       "n_layers": 100,
       "rule_hash": "c1127a977f",
       "tau_xy": 4,
@@ -181,7 +181,7 @@
         "summary.json"
       ],
       "label": "xy5_d0",
-      "n_complete": 24,
+      "n_complete": 29,
       "n_layers": 100,
       "rule_hash": "2004476cae",
       "tau_xy": 5,
@@ -196,7 +196,7 @@
         "summary.json"
       ],
       "label": "xy5_d1em05",
-      "n_complete": 73,
+      "n_complete": 83,
       "n_layers": 100,
       "rule_hash": "f2976667f9",
       "tau_xy": 5,
@@ -211,7 +211,7 @@
         "summary.json"
       ],
       "label": "xy5_d1em06",
-      "n_complete": 55,
+      "n_complete": 62,
       "n_layers": 100,
       "rule_hash": "8d41b94b80",
       "tau_xy": 5,
@@ -226,7 +226,7 @@
         "summary.json"
       ],
       "label": "xy5_d1em07",
-      "n_complete": 46,
+      "n_complete": 51,
       "n_layers": 100,
       "rule_hash": "3dccd0ae14",
       "tau_xy": 5,
@@ -241,7 +241,7 @@
         "summary.json"
       ],
       "label": "xy5_d1em08",
-      "n_complete": 40,
+      "n_complete": 44,
       "n_layers": 100,
       "rule_hash": "dcdfd18695",
       "tau_xy": 5,
@@ -256,7 +256,7 @@
         "summary.json"
       ],
       "label": "xy5_d1em09",
-      "n_complete": 36,
+      "n_complete": 39,
       "n_layers": 100,
       "rule_hash": "d4bf35f6a1",
       "tau_xy": 5,
@@ -271,7 +271,7 @@
         "summary.json"
       ],
       "label": "xy6_d0",
-      "n_complete": 20,
+      "n_complete": 25,
       "n_layers": 100,
       "rule_hash": "70fac08421",
       "tau_xy": 6,
@@ -286,7 +286,7 @@
         "summary.json"
       ],
       "label": "xy6_d1em05",
-      "n_complete": 68,
+      "n_complete": 76,
       "n_layers": 100,
       "rule_hash": "4112f93b28",
       "tau_xy": 6,
@@ -301,7 +301,7 @@
         "summary.json"
       ],
       "label": "xy6_d1em06",
-      "n_complete": 52,
+      "n_complete": 58,
       "n_layers": 100,
       "rule_hash": "2a0b315a57",
       "tau_xy": 6,
@@ -316,7 +316,7 @@
         "summary.json"
       ],
       "label": "xy6_d1em07",
-      "n_complete": 43,
+      "n_complete": 47,
       "n_layers": 100,
       "rule_hash": "b7d20a378a",
       "tau_xy": 6,
@@ -331,7 +331,7 @@
         "summary.json"
       ],
       "label": "xy6_d1em08",
-      "n_complete": 37,
+      "n_complete": 41,
       "n_layers": 100,
       "rule_hash": "4c4c43b00a",
       "tau_xy": 6,
@@ -346,7 +346,7 @@
         "summary.json"
       ],
       "label": "xy6_d1em09",
-      "n_complete": 33,
+      "n_complete": 36,
       "n_layers": 100,
       "rule_hash": "4b87f76897",
       "tau_xy": 6,
@@ -361,7 +361,7 @@
         "summary.json"
       ],
       "label": "xy7_d0",
-      "n_complete": 19,
+      "n_complete": 23,
       "n_layers": 100,
       "rule_hash": "9d3cf3d2bd",
       "tau_xy": 7,
@@ -376,7 +376,7 @@
         "summary.json"
       ],
       "label": "xy7_d1em05",
-      "n_complete": 68,
+      "n_complete": 77,
       "n_layers": 100,
       "rule_hash": "af6757c897",
       "tau_xy": 7,
@@ -391,7 +391,7 @@
         "summary.json"
       ],
       "label": "xy7_d1em06",
-      "n_complete": 50,
+      "n_complete": 56,
       "n_layers": 100,
       "rule_hash": "719c312286",
       "tau_xy": 7,
@@ -406,7 +406,7 @@
         "summary.json"
       ],
       "label": "xy7_d1em07",
-      "n_complete": 42,
+      "n_complete": 46,
       "n_layers": 100,
       "rule_hash": "4259cc7773",
       "tau_xy": 7,
@@ -421,7 +421,7 @@
         "summary.json"
       ],
       "label": "xy7_d1em08",
-      "n_complete": 36,
+      "n_complete": 39,
       "n_layers": 100,
       "rule_hash": "d670521f4b",
       "tau_xy": 7,
@@ -436,7 +436,7 @@
         "summary.json"
       ],
       "label": "xy7_d1em09",
-      "n_complete": 32,
+      "n_complete": 35,
       "n_layers": 100,
       "rule_hash": "affc2777f8",
       "tau_xy": 7,
@@ -451,7 +451,7 @@
         "summary.json"
       ],
       "label": "xy8_d0",
-      "n_complete": 18,
+      "n_complete": 22,
       "n_layers": 100,
       "rule_hash": "85f3a6cfec",
       "tau_xy": 8,
@@ -466,7 +466,7 @@
         "summary.json"
       ],
       "label": "xy8_d1em05",
-      "n_complete": 68,
+      "n_complete": 76,
       "n_layers": 100,
       "rule_hash": "0de6ad4b23",
       "tau_xy": 8,
@@ -481,7 +481,7 @@
         "summary.json"
       ],
       "label": "xy8_d1em06",
-      "n_complete": 50,
+      "n_complete": 55,
       "n_layers": 100,
       "rule_hash": "6ca9e9ecf7",
       "tau_xy": 8,
@@ -496,7 +496,7 @@
         "summary.json"
       ],
       "label": "xy8_d1em07",
-      "n_complete": 41,
+      "n_complete": 45,
       "n_layers": 100,
       "rule_hash": "6a9efc7ab8",
       "tau_xy": 8,
@@ -511,7 +511,7 @@
         "summary.json"
       ],
       "label": "xy8_d1em08",
-      "n_complete": 35,
+      "n_complete": 39,
       "n_layers": 100,
       "rule_hash": "e71651344a",
       "tau_xy": 8,
@@ -526,7 +526,7 @@
         "summary.json"
       ],
       "label": "xy8_d1em09",
-      "n_complete": 31,
+      "n_complete": 34,
       "n_layers": 100,
       "rule_hash": "add3f637cc",
       "tau_xy": 8,
@@ -811,7 +811,7 @@
         "summary.json"
       ],
       "label": "xyz7_d0",
-      "n_complete": 57,
+      "n_complete": 92,
       "n_layers": 100,
       "rule_hash": "586bdfbefb",
       "tau_xy": 0,
@@ -834,14 +834,14 @@
     },
     {
       "coeff_min": 1e-06,
-      "complete": false,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
         "config.json",
         "summary.json"
       ],
       "label": "xyz7_d1em06",
-      "n_complete": 49,
+      "n_complete": 100,
       "n_layers": 100,
       "rule_hash": "3804378557",
       "tau_xy": 0,
@@ -864,14 +864,14 @@
     },
     {
       "coeff_min": 1e-08,
-      "complete": false,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
         "config.json",
         "summary.json"
       ],
       "label": "xyz7_d1em08",
-      "n_complete": 86,
+      "n_complete": 100,
       "n_layers": 100,
       "rule_hash": "ed9b93607a",
       "tau_xy": 0,
@@ -879,14 +879,14 @@
     },
     {
       "coeff_min": 1e-09,
-      "complete": false,
+      "complete": true,
       "family": "xyz+coeff",
       "files": [
         "config.json",
         "summary.json"
       ],
       "label": "xyz7_d1em09",
-      "n_complete": 71,
+      "n_complete": 100,
       "n_layers": 100,
       "rule_hash": "fbc9b4f1eb",
       "tau_xy": 0,
@@ -901,7 +901,7 @@
         "summary.json"
       ],
       "label": "xyz8_d0",
-      "n_complete": 37,
+      "n_complete": 52,
       "n_layers": 100,
       "rule_hash": "55392e2fa5",
       "tau_xy": 0,
@@ -931,7 +931,7 @@
         "summary.json"
       ],
       "label": "xyz8_d1em06",
-      "n_complete": 80,
+      "n_complete": 97,
       "n_layers": 100,
       "rule_hash": "2bc3fc1ae5",
       "tau_xy": 0,
@@ -946,7 +946,7 @@
         "summary.json"
       ],
       "label": "xyz8_d1em07",
-      "n_complete": 65,
+      "n_complete": 79,
       "n_layers": 100,
       "rule_hash": "00e4fb7ccf",
       "tau_xy": 0,
@@ -961,7 +961,7 @@
         "summary.json"
       ],
       "label": "xyz8_d1em08",
-      "n_complete": 57,
+      "n_complete": 70,
       "n_layers": 100,
       "rule_hash": "e2174875fa",
       "tau_xy": 0,
@@ -976,7 +976,7 @@
         "summary.json"
       ],
       "label": "xyz8_d1em09",
-      "n_complete": 49,
+      "n_complete": 63,
       "n_layers": 100,
       "rule_hash": "051065ea5b",
       "tau_xy": 0,

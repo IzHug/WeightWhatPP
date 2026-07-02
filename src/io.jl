@@ -197,6 +197,53 @@ function layer_artifact_exists(path::AbstractString)
     return all(isfile(joinpath(path, string(part))) for part in parts)
 end
 
+function foreach_layer_artifact_chunk(f::Function, path::AbstractString;
+                                      expected::AbstractString)
+    if isfile(path)
+        obj = deserialize(path)
+        if expected == "dict"
+            obj isa AbstractDict || error("expected Dict artifact at $path")
+        elseif expected == "vector"
+            obj isa AbstractVector || error("expected Vector artifact at $path")
+        else
+            error("unknown expected artifact type '$expected'")
+        end
+        f(obj, 1, 1)
+        return nothing
+    end
+
+    if !isdir(path)
+        error("layer artifact not found: $path")
+    end
+
+    manifest = joinpath(path, "manifest.json")
+    isfile(manifest) || error("chunked layer artifact is missing manifest: $path")
+    obj = JSON3.read(read(manifest, String), Dict)
+    string(get(obj, "format", "")) == CHUNKED_JLS_FORMAT ||
+        error("unknown chunked layer artifact format at $path")
+    container_type = string(get(obj, "container_type", ""))
+    container_type == expected ||
+        error("expected $expected artifact at $path, got container_type='$container_type'")
+    parts = [string(part) for part in get(obj, "parts", Any[])]
+    all(isfile(joinpath(path, part)) for part in parts) ||
+        error("chunked layer artifact has missing parts: $path")
+
+    n_parts = length(parts)
+    for (i, part) in enumerate(parts)
+        chunk = deserialize(joinpath(path, part))
+        if expected == "dict"
+            chunk isa AbstractDict || error("expected Dict chunk in $path/$part")
+        elseif expected == "vector"
+            chunk isa AbstractVector || error("expected Vector chunk in $path/$part")
+        else
+            error("unknown expected artifact type '$expected'")
+        end
+        f(chunk, i, n_parts)
+        i % 8 == 0 && GC.gc()
+    end
+    return nothing
+end
+
 function read_layer_artifact(path::AbstractString)
     isfile(path) && return deserialize(path)
     if !isdir(path)

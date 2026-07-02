@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-24T12:44:06Z",
+  "generated_at": "2026-07-02T21:08:36Z",
   "layout": "data/<system>/<rule_hash>/{config.json,summary.json,cdf_layers.json}",
   "raw_snapshots": "not included; regenerate into runs/ with scripts/run_one.jl or the original cluster pipeline",
-  "source": "production runs_v3 JSON cache",
+  "source": "production runs JSON cache (2026-06-28 re-extraction)",
   "systems": {
     "chain16": {
       "has_reference": true,
@@ -42,13 +42,13 @@
     },
     "rect5x5_dt0p04_l25": {
       "has_reference": true,
-      "n_files": 90,
+      "n_files": 133,
       "n_rules": 65,
       "path": "rect5x5_dt0p04_l25"
     },
     "rect5x5_h5p158": {
       "has_reference": true,
-      "n_files": 78,
+      "n_files": 99,
       "n_rules": 65,
       "path": "rect5x5_h5p158"
     }
